@@ -1,0 +1,11 @@
+rootProject.name = 'java-reactive-demos'
+include('java-rx-mono-demo')
+include('java-rx-batchig-demo')
+include('java-rx-context-demo')
+include('java-rx-flux-demo')
+include('java-rx-operators-demo')
+include('java-rx-overflow-strategy-demo')
+include('java-rx-publishers-demo')
+include('java-rx-retry-demo')
+include('java-rx-sinks-demo')
+include('java-rx-thread-scheduling-demo')

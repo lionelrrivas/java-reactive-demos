@@ -1,0 +1,26 @@
+subprojects {
+    apply plugin: 'application'
+    version = '1.0.0'
+    group = 'com.lionelrivas'
+
+repositories {
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url 'https://repo.spring.io/snapshot' }
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    implementation platform ('io.projectreactor:reactor-bom:2020.0.18')
+    implementation 'io.projectreactor:reactor-core'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    testImplementation 'io.projectreactor:reactor-test'
+}
+
+    tasks.named('test') {
+        useJUnitPlatform()
+    }
+}
